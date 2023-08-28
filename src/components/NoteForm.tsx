@@ -29,13 +29,13 @@ export default function NoteForm() {
 	};
 
 	return (
-		<div className="p-24 min-w-full flex items-stretch">
+		<div className="min-w-full flex items-stretch my-[3rem]">
 			<form onSubmit={handleSubmit}>
 				<input
 					placeholder="Buy more bananas 🍌"
 					name="newNoteContent"
 					type="text"
-					className="p-5 mr-2.5 min-h-22 w-300 min-w-300 self-center bg-gray-400/25 rounded-md"
+					className="p-5 mr-2.5 min-h-22 w-[20vw] min-w-[20vw] self-center bg-gray-400/25 rounded-md"
 					autoFocus
 				></input>
 
