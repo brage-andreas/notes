@@ -16,11 +16,21 @@ export default function Note(props: {
 	content: string;
 }) {
 	return (
-		<Link href={`/notes/${props.id}`} key={props.id}>
-			<small className={"m-0 text-xs opacity-50"}>
+		<Link
+			href={`/notes/${props.id}`}
+			key={props.id}
+			className="p-[0.75rem] bg-gray-400/40 rounded-md mb-[0.5rem] mr-[0.5rem] min-h-[12.5vh]"
+		>
+			<small className={"m-0 p-0 text-xs opacity-50 font-light "}>
 				{formatDate(new Date(props.createdAt))}
 			</small>
-			<p className={"m-0 max-w-[30ch] text-xl"}>{props.content}</p>
+			<p
+				className={
+					"m-0 mb-5 max-w-[50ch] min-h-max text-xl overflow-auto truncate"
+				}
+			>
+				{props.content}
+			</p>
 		</Link>
 	);
 }
