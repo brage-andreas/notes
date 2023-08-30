@@ -1,5 +1,5 @@
+import Note from "@/components/Note";
 import NoteForm from "@/components/NoteForm";
-import Note from "@/components/note.tsx";
 
 const getNotes = async () => {
 	const res = await fetch("http://localhost:3000/api/notes/", {
@@ -7,7 +7,13 @@ const getNotes = async () => {
 		method: "GET"
 	});
 
-	const { data } = await res.json();
+	const json = await res.json();
+	const data = json.data.map(
+		(e: { id: string; createdAt: string; content: string }) => ({
+			...e,
+			createdAt: new Date(e.createdAt)
+		})
+	);
 
 	return data as Array<{ id: string; createdAt: Date; content: string }>;
 };
