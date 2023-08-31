@@ -41,7 +41,7 @@ export default function RootLayout({
 									</a>
 								</p>
 							</div>
-							<div>Click the notes to open them!</div>
+							<div>«Leave no thread hanging»</div>
 						</div>
 					</div>
 				</footer>
