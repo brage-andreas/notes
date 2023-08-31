@@ -29,17 +29,21 @@ export default function NoteForm() {
 	};
 
 	return (
-		<div className="min-w-full flex items-stretch my-[3rem]">
+		<div className="min-w-full flex my-[3rem]">
 			<form onSubmit={handleSubmit}>
-				<input
+				<textarea
 					placeholder="Buy more bananas 🍌"
 					name="newNoteContent"
-					type="text"
-					className="p-5 mr-2.5 min-h-22 w-[20vw] min-w-[20vw] self-center bg-gray-400/25 rounded-md"
+					className="p-5 mr-2.5 w-[20vw] min-w-[20vw] max-h-[25vh] h-[4.25rem] min-h-[4.25rem] border-2 border-platinum rounded-md resize-none hover:resize-y"
 					autoFocus
-				></input>
+				/>
 
-				<button type="submit" className="p-5 bg-indigo-500 rounded-md">
+				<button
+					type="submit"
+					className={`p-5 bg-periwinkle border-2 border-periwinkle rounded-md align-top cursor-${
+						isDone ? "pointer" : "progress"
+					}`}
+				>
 					{isDone ? "Add" : "Working..."}
 				</button>
 			</form>
