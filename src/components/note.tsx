@@ -10,7 +10,7 @@ export default function Note(props: {
 		<Link
 			href={`/notes/${props.id}`}
 			key={props.id}
-			className="p-[0.75rem] bg-orange-400/80 rounded-md mb-[0.5rem] mr-[0.5rem] min-h-[12.5vh]"
+			className="p-[0.75rem] bg-platinum rounded-md mb-[0.5rem] mr-[0.5rem] min-h-[12.5vh]"
 		>
 			<small className={"m-0 p-0 text-xs"}>
 				<DateTime date={props.createdAt} />
