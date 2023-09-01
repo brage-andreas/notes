@@ -1,11 +1,8 @@
+import { type Note } from "@prisma/client";
 import Link from "next/link";
 import DateTime from "./DateTime.tsx";
 
-export default function Note(props: {
-	id: string;
-	createdAt: Date;
-	content: string;
-}) {
+export default function NoteComponent(props: Note) {
 	return (
 		<Link
 			href={`/notes/${props.id}`}
