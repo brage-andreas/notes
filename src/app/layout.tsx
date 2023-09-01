@@ -1,3 +1,5 @@
+"use client";
+
 import { type Metadata } from "next";
 import { Lexend, Noto_Serif } from "next/font/google";
 import "./globals.css";
@@ -35,7 +37,7 @@ export default function RootLayout({
 									💖 OSS on{" "}
 									<a
 										href="https://github.com/brage-andreas/notes"
-										className="text-indigo-500"
+										className="text-jade underline"
 									>
 										GitHub
 									</a>
